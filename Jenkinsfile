@@ -23,6 +23,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
+        mvn clean verify
         mvn clean install
         ls
         pwd
