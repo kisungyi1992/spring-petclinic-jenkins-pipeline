@@ -39,6 +39,7 @@ pipeline {
     }
     stage('Deploy Image') {
       steps{
+         sh 'docker login -u kisungyi92 -p RHKSflwk123!'
          script {
             docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
