@@ -23,7 +23,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-        mvn clean install
+        mvn clean install -Djacoco.skip=true
         ls
         pwd
         ''' 
