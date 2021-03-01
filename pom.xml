@@ -141,6 +141,8 @@
               <goal>build-info</goal>
             </goals>
             <configuration>
+              <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+              <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
               <additionalProperties>
                 <encoding.source>${project.build.sourceEncoding}</encoding.source>
                 <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
