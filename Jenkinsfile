@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/spring-projects/spring-petclinic.git'
+        git 'https://github.com/kisungyi92/spring-petclinic-jenkins-pipeline.git'
       }
     }
     stage('Compile') {
@@ -23,8 +23,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-        mvn clean verify
-        mvn clean install -e
+        mvn clean install
         ls
         pwd
         ''' 
