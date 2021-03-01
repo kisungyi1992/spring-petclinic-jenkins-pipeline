@@ -24,7 +24,7 @@ pipeline {
       steps {
         sh '''
         mvn clean verify
-        mvn clean install
+        mvn clean install -e
         ls
         pwd
         ''' 
