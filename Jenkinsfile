@@ -33,7 +33,7 @@ pipeline {
     stage('Building Image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":latest"
+          dockerImage = docker.build registry + ":v7"
         }
       }
     }
