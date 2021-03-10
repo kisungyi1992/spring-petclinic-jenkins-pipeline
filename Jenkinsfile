@@ -33,7 +33,7 @@ pipeline {
     stage('Building Image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":v8"
+          dockerImage = docker.build registry + ":v10"
         }
       }
     }
@@ -48,7 +48,7 @@ pipeline {
     }
     stage('Remove Unused docker image') {
       steps{
-        sh "docker rmi $registry:v8"
+        sh "docker rmi $registry:v10"
       }
     }
   }
